@@ -77,9 +77,5 @@ jobs:
         run: python -m py_compile main.py && echo "Python syntax OK"
 
       - name: Success
-        run: |
-          echo ""
-          echo "========================================"
-          echo "  All checks passed!"
-          echo "  Your setup is ready to go."
-          echo "========================================"
+        run: main.py
+        
