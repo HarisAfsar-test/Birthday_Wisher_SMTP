@@ -25,7 +25,7 @@ if today in birthdays_dict:
     with open(file_path) as letter_file:
         contents=letter_file.read()
         contents=contents.replace("[NAME]",birthday_person["name"])
-    with smtplib.SMTP("smtp.gmail.com") as connection:
+    with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
         connection.login(my_email,my_password)
         connection.sendmail(my_email,birthday_person["email"],f"Subject:Happy Birthday!!\n\n{contents}")
