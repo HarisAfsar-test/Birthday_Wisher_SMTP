@@ -1,12 +1,14 @@
 
 #importing libraries
+import os 
 import datetime as dt
 import smtplib
 import pandas as pd
 import random
 #my_data
-my_email="harisafsarpythontest@gmail.com"
-my_password="eifn vehy bynf wgzk"
+my_email=os.environ.get("MY_EMAIL")
+my_password=os.environ.get("MY_PASSWORD")
+
 #today
 now = dt.datetime.now()
 month = now.month
